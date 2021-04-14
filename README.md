@@ -1,5 +1,3 @@
-# bookdown-tutorial
-Mini tutorial for bookdown 
+# An Introduction to Statistics  
 
-
-afdafadjl
+Notes for an introductory Statistics course.   

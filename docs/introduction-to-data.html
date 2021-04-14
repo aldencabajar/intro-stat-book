@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Unit 2 Introduction to Data | Making free books with RStudio’s RMarkdown &amp; Bookdown</title>
+  <meta name="description" content="A mini bookdown tutorial book on how to make bookdown books." />
+  <meta name="generator" content="bookdown 0.21 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Unit 2 Introduction to Data | Making free books with RStudio’s RMarkdown &amp; Bookdown" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="A mini bookdown tutorial book on how to make bookdown books." />
+  <meta name="github-repo" content="openscapes/series" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Unit 2 Introduction to Data | Making free books with RStudio’s RMarkdown &amp; Bookdown" />
+  
+  <meta name="twitter:description" content="A mini bookdown tutorial book on how to make bookdown books." />
+  
+
+<meta name="author" content="Julie Lowndes" />
+
+
+<meta name="date" content="2021-04-14" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  
+  
+<link rel="prev" href="index.html"/>
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="lib/css/bootstrap.min.css" type="text/css" />
+<link rel="stylesheet" href="lib/css/style.css" type="text/css" />
+<link rel="stylesheet" href="lib/css/lesson.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Mini Bookdown Tutorial</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="1" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i><b>1</b> output: bookdown::gitbook</a><ul>
+<li class="chapter" data-level="1.1" data-path="index.html"><a href="index.html#learn-all-about-bookdown"><i class="fa fa-check"></i><b>1.1</b> Learn all about Bookdown</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="introduction-to-data.html"><a href="introduction-to-data.html"><i class="fa fa-check"></i><b>2</b> Introduction to Data</a><ul>
+<li class="chapter" data-level="2.1" data-path="introduction-to-data.html"><a href="introduction-to-data.html#what-is-data"><i class="fa fa-check"></i><b>2.1</b> What is Data?</a></li>
+<li class="chapter" data-level="2.2" data-path="introduction-to-data.html"><a href="introduction-to-data.html#types-of-data"><i class="fa fa-check"></i><b>2.2</b> Types of Data</a></li>
+<li class="chapter" data-level="2.3" data-path="introduction-to-data.html"><a href="introduction-to-data.html#homework-1"><i class="fa fa-check"></i><b>2.3</b> Homework 1</a></li>
+<li class="chapter" data-level="2.4" data-path="introduction-to-data.html"><a href="introduction-to-data.html#measures-of-central-tendencymct-wiki"><i class="fa fa-check"></i><b>2.4</b> Measures of Central Tendency</a></li>
+<li class="chapter" data-level="2.5" data-path="introduction-to-data.html"><a href="introduction-to-data.html#examining-numerical-data"><i class="fa fa-check"></i><b>2.5</b> Examining Numerical Data</a><ul>
+<li class="chapter" data-level="2.5.1" data-path="introduction-to-data.html"><a href="introduction-to-data.html#numerical-methods"><i class="fa fa-check"></i><b>2.5.1</b> Numerical Methods</a></li>
+<li class="chapter" data-level="2.5.2" data-path="introduction-to-data.html"><a href="introduction-to-data.html#graphical-methods"><i class="fa fa-check"></i><b>2.5.2</b> Graphical Methods</a></li>
+</ul></li>
+<li class="chapter" data-level="2.6" data-path="introduction-to-data.html"><a href="introduction-to-data.html#examining-categorical-data"><i class="fa fa-check"></i><b>2.6</b> Examining Categorical Data</a><ul>
+<li class="chapter" data-level="2.6.1" data-path="introduction-to-data.html"><a href="introduction-to-data.html#tabular-methods"><i class="fa fa-check"></i><b>2.6.1</b> Tabular Methods</a></li>
+<li class="chapter" data-level="2.6.2" data-path="introduction-to-data.html"><a href="introduction-to-data.html#graphical-methods-1"><i class="fa fa-check"></i><b>2.6.2</b> Graphical Methods</a></li>
+</ul></li>
+<li class="chapter" data-level="2.7" data-path="introduction-to-data.html"><a href="introduction-to-data.html#prelude-some-number-theory"><i class="fa fa-check"></i><b>2.7</b> Prelude: Some Number Theory</a><ul>
+<li class="chapter" data-level="2.7.1" data-path="introduction-to-data.html"><a href="introduction-to-data.html#the-factorial"><i class="fa fa-check"></i><b>2.7.1</b> The Factorial</a></li>
+<li class="chapter" data-level="2.7.2" data-path="introduction-to-data.html"><a href="introduction-to-data.html#combinations"><i class="fa fa-check"></i><b>2.7.2</b> Combinations</a></li>
+</ul></li>
+<li class="chapter" data-level="2.8" data-path="introduction-to-data.html"><a href="introduction-to-data.html#homework-2"><i class="fa fa-check"></i><b>2.8</b> Homework 2</a></li>
+<li class="chapter" data-level="2.9" data-path="introduction-to-data.html"><a href="introduction-to-data.html#references"><i class="fa fa-check"></i><b>2.9</b> References</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://bookdown.org" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Making free books with RStudio’s RMarkdown &amp; Bookdown</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="introduction-to-data" class="section level1">
+<h1><span class="header-section-number">Unit 2</span> Introduction to Data</h1>
+<script type="text/x-mathjax-config">
+MathJax.Hub.Register.StartupHook("TeX Jax Ready",function () {
+  MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros,{
+    cancel: ["Extension","cancel"],
+    bcancel: ["Extension","cancel"],
+    xcancel: ["Extension","cancel"],
+    cancelto: ["Extension","cancel"]
+  });
+});
+</script>
+<div id="what-is-data" class="section level2">
+<h2><span class="header-section-number">2.1</span> What is Data?</h2>
+<p>Data can be thought of simply as information, a collection of facts. An example would be this Star Wars dataset<a href="#fn1" class="footnote-ref" id="fnref1"><sup>1</sup></a> that will be used for illustrative purposes throughout the course.</p>
+<pre><code># A tibble: 87 x 14
+   name  height  mass hair_color skin_color eye_color birth_year sex   gender
+   &lt;chr&gt;  &lt;int&gt; &lt;dbl&gt; &lt;chr&gt;      &lt;chr&gt;      &lt;chr&gt;          &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt; 
+ 1 Luke~    172    77 blonde     fair       blue            19   male  mascu~
+ 2 C-3PO    167    75 &lt;NA&gt;       gold       yellow         112   none  mascu~
+ 3 R2-D2     96    32 &lt;NA&gt;       white, bl~ red             33   none  mascu~
+ 4 Dart~    202   136 none       white      yellow          41.9 male  mascu~
+ 5 Leia~    150    49 brown      light      brown           19   fema~ femin~
+ 6 Owen~    178   120 brown, gr~ light      blue            52   male  mascu~
+ 7 Beru~    165    75 brown      light      blue            47   fema~ femin~
+ 8 R5-D4     97    32 &lt;NA&gt;       white, red red             NA   none  mascu~
+ 9 Bigg~    183    84 black      light      brown           24   male  mascu~
+10 Obi-~    182    77 auburn, w~ fair       blue-gray       57   male  mascu~
+# ... with 77 more rows, and 5 more variables: homeworld &lt;chr&gt;, species &lt;chr&gt;,
+#   films &lt;list&gt;, vehicles &lt;list&gt;, starships &lt;list&gt;</code></pre>
+<p>This is a collection of information about the characters in <em>Star Wars</em> such as height, hair color, and species. Each row is one observation.</p>
+</div>
+<div id="types-of-data" class="section level2">
+<h2><span class="header-section-number">2.2</span> Types of Data</h2>
+<p>In a more technical sense, data is “a set of values of qualitative or quantitative variables about one or more persons or objects.”<a href="#fn2" class="footnote-ref" id="fnref2"><sup>2</sup></a> The <strong>Star Wars</strong> dataset will be used to illustrate this concept.</p>
+<p>The dataset contains 14 columns. Each column corresponds to a <strong>variable</strong>. A variable in statistics means an attribute. For example, height and hair color are variables and have a value for each observation.</p>
+<p>Variables may be <strong>quantitative</strong> or <strong>qualitative</strong>. Numerical variables are those that take on quantitative values. The variable <code>mass</code> is an example of a quantitative variable.</p>
+<pre><code># A tibble: 10 x 2
+   name                mass
+   &lt;chr&gt;              &lt;dbl&gt;
+ 1 Luke Skywalker        77
+ 2 C-3PO                 75
+ 3 R2-D2                 32
+ 4 Darth Vader          136
+ 5 Leia Organa           49
+ 6 Owen Lars            120
+ 7 Beru Whitesun lars    75
+ 8 R5-D4                 32
+ 9 Biggs Darklighter     84
+10 Obi-Wan Kenobi        77</code></pre>
+<p>Categorical variables, on the other hand, have qualitative values and each value can be thought of as a “category”. An example would be <code>eye_color</code> from the Star Wars dataset, which has the following values:</p>
+<pre><code> [1] &quot;blue&quot;          &quot;yellow&quot;        &quot;red&quot;           &quot;brown&quot;        
+ [5] &quot;blue-gray&quot;     &quot;black&quot;         &quot;orange&quot;        &quot;hazel&quot;        
+ [9] &quot;pink&quot;          &quot;unknown&quot;       &quot;red, blue&quot;     &quot;gold&quot;         
+[13] &quot;green, yellow&quot; &quot;white&quot;         &quot;dark&quot;         </code></pre>
+</div>
+<div id="homework-1" class="section level2">
+<h2><span class="header-section-number">2.3</span> Homework 1</h2>
+<p>The Motor Trend Car Road Tests dataset<a href="#fn3" class="footnote-ref" id="fnref3"><sup>3</sup></a> comprises fuel consumption and 10 aspects of automobile design and performance for 32 automobiles. Classify each variable in this dataset as numerical or categorical.</p>
+<pre><code>                   mpg cyl disp  hp drat    wt  qsec vs am gear carb
+Mazda RX4         21.0   6  160 110 3.90 2.620 16.46  0  1    4    4
+Mazda RX4 Wag     21.0   6  160 110 3.90 2.875 17.02  0  1    4    4
+Datsun 710        22.8   4  108  93 3.85 2.320 18.61  1  1    4    1
+Hornet 4 Drive    21.4   6  258 110 3.08 3.215 19.44  1  0    3    1
+Hornet Sportabout 18.7   8  360 175 3.15 3.440 17.02  0  0    3    2
+Valiant           18.1   6  225 105 2.76 3.460 20.22  1  0    3    1</code></pre>
+<ul>
+<li>mpg - Miles/(US) gallon<br />
+</li>
+<li>cyl - Number of cylinders<br />
+</li>
+<li>disp - Displacement (cu.in.)<br />
+</li>
+<li>hp - Gross horsepower<br />
+</li>
+<li>drat - Rear axle ratio<br />
+</li>
+<li>wt - Weight (1000 lbs)<br />
+</li>
+<li>qsec - 1/4 mile time<br />
+</li>
+<li>vs - Engine (0 = V-shaped, 1 = straight)<br />
+</li>
+<li>am - Transmission (0 = automatic, 1 = manual)<br />
+</li>
+<li>gear - Number of forward gears<br />
+</li>
+<li>carb - Number of carburetors</li>
+</ul>
+</div>
+<div id="measures-of-central-tendencymct-wiki" class="section level2">
+<h2><span class="header-section-number">2.4</span> Measures of Central Tendency<a href="#fn4" class="footnote-ref" id="fnref4"><sup>4</sup></a></h2>
+<p>The <strong>mean</strong>, <strong>median</strong>, and <strong>mode</strong> are known as <u>measures of central tendency</u> in statistics and are called such because they represent what is a typical or central value. They can be thought of as “average values”.</p>
+<ul>
+<li>Mean - the sum of all measurements divided by the number of observations in the dataset<br />
+</li>
+<li>Median - the middle value that separates the higher half from the lower half of the dataset<br />
+</li>
+<li>Mode - the most frequent value in the data set</li>
+</ul>
+</div>
+<div id="examining-numerical-data" class="section level2">
+<h2><span class="header-section-number">2.5</span> Examining Numerical Data</h2>
+<div id="numerical-methods" class="section level3">
+<h3><span class="header-section-number">2.5.1</span> Numerical Methods</h3>
+<p>The most common way to explore numerical data <em>numerically</em> is by calculating what are called <strong>summary statistics</strong>. A summary statistic is a quantity that summarizes the data into a single point in order to present information as simply as possible.</p>
+<p>The three measures of central tendency are examples of summary statistics, and there are several others which might be familiar. One common set of summary statistics is known as the <strong>five-point summary</strong>, and is comprised of:</p>
+<ul>
+<li>minimum</li>
+<li>first quartile (25th percentile)<br />
+</li>
+<li>median<br />
+</li>
+<li>third quartile (75th percentile)<br />
+</li>
+<li>maximum</li>
+</ul>
+<p>To illustrate, here is a five-point summary for the mass of the Star Wars characters:</p>
+<pre><code>   Min. 1st Qu.  Median    Mean 3rd Qu.    Max.    NA&#39;s 
+  15.00   55.60   79.00   97.31   84.50 1358.00      28 </code></pre>
+<p><br></p>
+<p>The last column labeled <code>NA's</code> gives the number of unknown values. This is not part of the five-point summary, but is a useful addition because it shows how many values were missing. There are 87 observations in the Star Wars dataset, but since 28 values for mass are missing, only 59 values were considered in calculating the five-point summary above.</p>
+</div>
+<div id="graphical-methods" class="section level3">
+<h3><span class="header-section-number">2.5.2</span> Graphical Methods</h3>
+<p>Numerical data can be visualized and examined using different types of graphs. Histograms and boxplots are two of common types of graphs used to visualize numerical variables.</p>
+<p>Below is a <strong>histogram</strong> of the heights of Star Wars characters:</p>
+<p><img src="intro-stat-book_files/figure-html/unnamed-chunk-6-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p><br></p>
+<p>The horizontal (or x-) axis of the histogram corresponds to the variable of interest. The y-axis displays the counts of observations that fall within each interval or bin. Note that in constructing the histogram, the left boundaries or <em>endpoints</em> are not included. For example, there are 20 characters (tallest bar) with a height greater than 175 cm but not greater than 185 cm. Those with a height of exactly 175 cm are included in the previous bar.</p>
+<p>Histograms show the <strong>distribution</strong> of data. A more technical definition of the term will be introduced later in the course but for now, it would suffice to think of distributions as <em>showing possible values of the data and how often they occur</em><a href="#fn5" class="footnote-ref" id="fnref5"><sup>5</sup></a>. From the histogram, one can see which values of the variable are more and less likely. In the example, most characters are at least 175 cm in height but are not taller than 185 cm. Also, there are characters who are significantly taller than the rest, as evidenced by the rightmost bar on the graph.</p>
+<p><strong>Boxplots</strong> are another way of graphing numerical data, and they present different information from histograms. Below is a boxplot of the heights of Star Wars characters:</p>
+<p><img src="intro-stat-book_files/figure-html/unnamed-chunk-7-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Instead of presenting the frequency of the data, boxplots show the summary statistics presented in the previous section:</p>
+<ul>
+<li><strong>median</strong> - the line in the middle<br />
+</li>
+<li><strong>Q1/first quartile</strong> - left edge of the box<br />
+</li>
+<li><strong>Q3/third quartile</strong> - right edge of the box</li>
+</ul>
+<p>The black points in the plot correspond to <strong>outliers</strong>, which are data points that deviate significantly from the other observations. In the context of this example, the points on the right represent the extremely short characters (like Yoda) while the points on the left are the towering characters (like Yarael Poof).</p>
+</div>
+</div>
+<div id="examining-categorical-data" class="section level2">
+<h2><span class="header-section-number">2.6</span> Examining Categorical Data</h2>
+<div id="tabular-methods" class="section level3">
+<h3><span class="header-section-number">2.6.1</span> Tabular Methods</h3>
+<p>Two types of tables are used most commonly in summarizing categorical data. These are <strong>frequency</strong> tables and <strong>contingency tables</strong>.</p>
+<p><br></p>
+<div id="frequency-tables" class="section level4">
+<h4><span class="header-section-number">2.6.1.1</span> Frequency Tables</h4>
+<p>A frequency table shows “numbers and percentages for each value”<a href="#fn6" class="footnote-ref" id="fnref6"><sup>6</sup></a> of the categorical variable. In effect, it presents the distribution of observations across all possible responses. As an example, here is a frequency table for the <code>hair_color</code> variable in the Star Wars dataset.</p>
+<pre><code>starwars$hair_color : 
+              Frequency   %(NA+)   %(NA-)
+none                 37     42.5     45.1
+brown                18     20.7     22.0
+black                13     14.9     15.9
+&lt;NA&gt;                  5      5.7      0.0
+blonde                4      4.6      4.9
+white                 4      4.6      4.9
+auburn                1      1.1      1.2
+auburn, grey          1      1.1      1.2
+auburn, white         1      1.1      1.2
+brown, grey           1      1.1      1.2
+grey                  1      1.1      1.2
+unknown               1      1.1      1.2
+  Total              87    100.0    100.0</code></pre>
+<p><br></p>
+<p>The percentages displayed are called relative frequencies and are calculated based on the total number of observations. Consider the row for <code>&lt;NA&gt;</code>, which refers to missing values in the data set. The <code>%(NA+)</code> column tells us that 5.7% of the total observations have missing values for hair color. Looking at the <code>%(NA-)</code> column, the percentage is now 0. That is because this column gives percentages relative to the total observations minus the missing values.</p>
+<p><br></p>
+</div>
+<div id="contingency-tables" class="section level4">
+<h4><span class="header-section-number">2.6.1.2</span> Contingency Tables</h4>
+<p>A <strong>contingency table</strong> displays the relationship between one categorical variable and another. It is called such because it allows us to examine whether the values of one variable are contingent (dependent) upon those of another.<a href="#fn7" class="footnote-ref" id="fnref7"><sup>7</sup></a></p>
+<p>Here is a contingency table for the variables gender and hair color:</p>
+<pre><code>               feminine masculine Sum
+                                     
+auburn                1         0   1
+auburn, grey          0         1   1
+auburn, white         0         1   1
+black                 3         9  12
+blonde                1         3   4
+brown                 6        11  17
+brown, grey           0         1   1
+grey                  0         1   1
+none                  5        31  36
+unknown               0         0   0
+white                 1         3   4
+Sum                  17        61  78</code></pre>
+<p><br></p>
+</div>
+</div>
+<div id="graphical-methods-1" class="section level3">
+<h3><span class="header-section-number">2.6.2</span> Graphical Methods</h3>
+<p>Categorical data can also be presented using graphs. The most common types are <strong>bar charts</strong> and <strong>pie charts</strong>.</p>
+<p><br></p>
+<div id="bar-charts" class="section level4">
+<h4><span class="header-section-number">2.6.2.1</span> Bar Charts</h4>
+<p>Shown here is a bar chart for the hair color of Star Wars characters:</p>
+<p><img src="intro-stat-book_files/figure-html/unnamed-chunk-10-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>The bar chart is the equivalent of a histogram for categorical variables. Each bar will correspond to a row in the frequency table from the previous section. Several facts can be deduced from this graph. Most characters in the dataset have no hair but among those that do, the most common hair color is brown.</p>
+<p><br></p>
+</div>
+<div id="exercise" class="section level4">
+<h4><span class="header-section-number">2.6.2.2</span> Exercise:</h4>
+<p>What other facts about the data does this bar chart show? Give at least one.</p>
+<p><br></p>
+</div>
+<div id="pie-chart" class="section level4">
+<h4><span class="header-section-number">2.6.2.3</span> Pie Chart</h4>
+<p>Below is a pie chart for the same variable, hair color, which was presented in the previous sections.</p>
+<p><img src="intro-stat-book_files/figure-html/unnamed-chunk-11-1.png" width="672" style="display: block; margin: auto;" /></p>
+<p>Although pie charts are commonly seen in infographics and posters, it is not considered as a good visualization because there is <strong>no scale</strong> present. The angles of the wedges cannot be compared directly, which makes it difficult to deduce whether one piece of the pie is larger than the other. Comparing this to the bar graph in the previous section, it is easy to see which chart is more effective at conveying information.</p>
+<p>There are several resources online which explain the ineffectiveness of pie charts in much greater detail. An <a href="https://www.businessinsider.com/pie-charts-are-the-worst-2013-6">article</a> in <em>Business Insider</em> explains very well why using a pie chart is a bad visualization technique.</p>
+<p><br></p>
+</div>
+</div>
+</div>
+<div id="prelude-some-number-theory" class="section level2">
+<h2><span class="header-section-number">2.7</span> Prelude: Some Number Theory</h2>
+<p>Digressing from the discussion on data, this section will introduce some basic notations in number theory in preparation for the discussion on probability distributions.</p>
+<div id="the-factorial" class="section level3">
+<h3><span class="header-section-number">2.7.1</span> The Factorial</h3>
+<p>In mathematics, the factorial of a <strong>non-negative</strong> integer <span class="math inline">\(n\)</span>, denoted by <span class="math inline">\(n!\)</span>, is the product of all positive integers less than or equal to <span class="math inline">\(n\)</span>:</p>
+<p><span class="math display">\[n! = n \times (n - 1) \times (n - 2) \times (n - 3) \times \dotsc \times 3 \times 2 \times 1\]</span></p>
+<p>For example, <span class="math inline">\(3!\)</span> is equal to <span class="math inline">\(3 \times 2 \times 1 = 6\)</span>, while <span class="math inline">\(5!\)</span> is <span class="math inline">\(5 \times 4 \times 3 \times 2 \times 1 = 120\)</span>.</p>
+<p>By definition, <span class="math inline">\(0!\)</span> is 1.</p>
+</div>
+<div id="combinations" class="section level3">
+<h3><span class="header-section-number">2.7.2</span> Combinations</h3>
+<p>“A combination is a mathematical technique that determines the number of possible arrangements in a collection of items where the order of the selection does not matter.”<a href="#fn8" class="footnote-ref" id="fnref8"><sup>8</sup></a></p>
+<p>Consider a small office with 7 employees. Since the company provides free lunch, a lunch committee consisting of 3 members is needed to decide the weekly menu. How many possible commitees of 3 can be created?</p>
+<p>The above is an example of a combination problem. It is equivalent to counting the number of ways a group of 3 can be chosen from a bigger group of 7. In mathematics, this is denoted as <span class="math inline">\({7 \choose 3}\)</span> and read as 7 choose 3 or more generally, <span class="math inline">\({n \choose k}\)</span> where <span class="math inline">\(n\)</span> is the total number of items and <span class="math inline">\(k\)</span> the number of items to be selected.</p>
+<p>To obtain the value of such an expression, the following formula is used:</p>
+<p><span class="math display">\[{n \choose k} = \frac{n!}{r! (n - r)!}\]</span></p>
+<p>Using this formula, the total number of possible committees is:</p>
+<p><span class="math display">\[
+\begin{align}
+{n \choose k} &amp;= \frac{n!}{r! (n - r)!} \\
+{7 \choose 3} &amp;= \frac{7!}{3! (7 - 3)!} \\
+{7 \choose 3} &amp;= \frac{7!}{3! \cdot 4!} \\
+{7 \choose 3} &amp;= \frac{7 \cdot \cancel{6} \cdot 5 \cdot \cancel{4!}}{\cancel{3!} \cdot \cancel{4!}} = 35
+\end{align}
+\]</span></p>
+<p><strong>Answer:</strong> There are 35 possible ways of selecting a lunch committee of 3 from a group of 7.</p>
+<p><br></p>
+</div>
+</div>
+<div id="homework-2" class="section level2">
+<h2><span class="header-section-number">2.8</span> Homework 2</h2>
+<p>What is standard deviation?</p>
+<p><br></p>
+</div>
+<div id="references" class="section level2">
+<h2><span class="header-section-number">2.9</span> References</h2>
+
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="footnotes">
+<hr />
+<ol start="1">
+<li id="fn1"><p><a href="https://www.tidyverse.org/">Tidyverse</a>.<a href="introduction-to-data.html#fnref1" class="footnote-back">↩</a></p></li>
+<li id="fn2"><p><a href="https://en.wikipedia.org/wiki/Data">Wikipedia</a>.<a href="introduction-to-data.html#fnref2" class="footnote-back">↩</a></p></li>
+<li id="fn3"><p><a href="https://www.rdocumentation.org/packages/datasets/versions/3.6.2/topics/mtcars">mtcars</a>.<a href="introduction-to-data.html#fnref3" class="footnote-back">↩</a></p></li>
+<li id="fn4"><p><a href="https://en.wikipedia.org/wiki/Central_tendency">Central tendency</a>.<a href="introduction-to-data.html#fnref4" class="footnote-back">↩</a></p></li>
+<li id="fn5"><p><a href="https://365datascience.com/tutorials/statistics-tutorials/distribution-in-statistics/">365 Data Science.</a><a href="introduction-to-data.html#fnref5" class="footnote-back">↩</a></p></li>
+<li id="fn6"><p><a href="https://course.oeru.org/research-methods/modules-4-6/module-4-quantitative-methods/statistics-presenting-categorical-data/">Statistics: Presenting Categorical Data</a><a href="introduction-to-data.html#fnref6" class="footnote-back">↩</a></p></li>
+<li id="fn7"><p><a href="https://course.oeru.org/research-methods/modules-4-6/module-4-quantitative-methods/statistics-presenting-categorical-data/">Statistics: Presenting Categorical Data</a><a href="introduction-to-data.html#fnref7" class="footnote-back">↩</a></p></li>
+<li id="fn8"><p><a href="https://corporatefinanceinstitute.com/resources/knowledge/other/combination/">Combinations</a>.<a href="introduction-to-data.html#fnref8" class="footnote-back">↩</a></p></li>
+</ol>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="index.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": "https://github.com/jules32/bookdown-tutorial/edit/master/01-intro-to-data.Rmd",
+"text": "Edit"
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["intro-stat-book.pdf"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
