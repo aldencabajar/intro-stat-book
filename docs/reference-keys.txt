@@ -1,5 +1,3 @@
-welcome
-learn-all-about-bookdown
 introduction-to-data
 what-is-data
 types-of-data
@@ -21,4 +19,3 @@ the-factorial
 combinations
 homework-2
 references
-output-bookdowngitbook
